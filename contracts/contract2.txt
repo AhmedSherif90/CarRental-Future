@@ -1,0 +1,16 @@
+________________________________________________________________
+		Contract
+
+*Customer Name:- Ahmed Ahm
+*Customer ID:- 1001
+*Customer National ID card:- 20145656985424 
+*Customer Driver license:- 20145656985424 
+*Customer PhoneNumber :- 01011920214 
+*Total Cost:-49500L.E 
+*Customer PayMent:- by Cradit Card 
+*Customer Cradit card number:-4485421390961179 
+*Date :2019-12-15 
+*return time :2020-02-03
+				(FutureAgance)
+
+_______________________________________________________________

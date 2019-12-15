@@ -1,0 +1,16 @@
+________________________________________________________________
+		Contract
+
+*Customer Name:- Ahmed Sherif
+*Customer ID:- 1000
+*Customer National ID card:- 20145687565624 
+*Customer Driver license:- 20145687565624 
+*Customer PhoneNumber :- 01011920214 
+*Total Cost:-1800L.E 
+*Customer PayMent:- Cash 
+*Customer Cradit card number:-0 
+*Date :2019-12-15 
+*return time :2019-12-16
+				(FutureAgance)
+
+_______________________________________________________________
