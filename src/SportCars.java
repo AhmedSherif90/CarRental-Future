@@ -1,4 +1,4 @@
- 
+
 public class SportCars extends Car {
 
     private String color;

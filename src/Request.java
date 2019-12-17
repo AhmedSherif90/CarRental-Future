@@ -2,6 +2,10 @@
 public class Request {
 
     private Car car;
+
+    public Car getCar() {
+        return car;
+    }
     private Customer customer;
     private int duration;
     private int requestid;
@@ -18,10 +22,7 @@ public class Request {
         this.confirmed = confirmed;
     }
 
-    public Car getCar() {
-        return car;
-    }
-
+    
     public void setCar(Car car) {
         this.car = car;
     }

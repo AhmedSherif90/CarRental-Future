@@ -2,12 +2,12 @@ _____________________________________________________________________________
 		 RequestId :(1)
 ***********************************************************************************
                                Customer information                        
-=> Customer Name:- Ahmed Sherif
+=> Customer Name:- a a
 => Id:-1000
 => Customer phonenumber:-01011920214
-=> Customer adress:-22 jump street
-=> Customer Driverlicense:-20145687565624
-=> Customer National ID Scard:-20145687565624
+=> Customer adress:-aa
+=> Customer Driverlicense:-20145656565656
+=> Customer National ID Scard:-20145656565656
 *****************************************************************************
 car Maker & model	 YEAR	 DialyCost	 Seats	 Color 
 Honda	  Civic	  2018	  1800		  5	Red	
@@ -19,30 +19,47 @@ _____________________________________________________________________________
 		 RequestId :(2)
 ***********************************************************************************
                                Customer information                        
-=> Customer Name:- Ahmed Ahm
-=> Id:-1001
+=> Customer Name:- a a
+=> Id:-1000
 => Customer phonenumber:-01011920214
-=> Customer adress:-22a a
-=> Customer Driverlicense:-20145656985424
-=> Customer National ID Scard:-20145656985424
+=> Customer adress:-aa
+=> Customer Driverlicense:-20145656565656
+=> Customer National ID Scard:-20145656565656
 *****************************************************************************
 car Maker & model	 YEAR	 DialyCost	 Seats	 Color 
 Honda	  Civic	  2018	  1800		  5	Red	
-duration:- 50 days
- Status:- confirmed
- Total Cost:- 49500 L.E 
- Reward 15% Discount
+duration:- 0 day
+Status:- confirmed
+ Total Cost:- 0 L.E 
 
 _____________________________________________________________________________
 		 RequestId :(3)
 ***********************************************************************************
                                Customer information                        
-=> Customer Name:- Ahmed Sheriff
+=> Customer Name:- Ahmed Sherif
 => Id:-1002
 => Customer phonenumber:-01011920214
-=> Customer adress:-sfghgfdx
-=> Customer Driverlicense:-20146545874125
-=> Customer National ID Scard:-20146545874125
+=> Customer adress:-asd
+=> Customer Driverlicense:-20145658745454
+=> Customer National ID Scard:-20145658745454
+*****************************************************************************
+car Maker & model	 YEAR	 DialyCost	 Seats	 Color 
+Honda	  Civic	  2018	  1800		  5	Red	
+duration:- 14 days
+ Status:- confirmed
+ Total Cost:- 13860 L.E 
+ Reward 15% Discount
+
+_____________________________________________________________________________
+		 RequestId :(4)
+***********************************************************************************
+                               Customer information                        
+=> Customer Name:- asdf a
+=> Id:-1003
+=> Customer phonenumber:-01011920214
+=> Customer adress:-asdf
+=> Customer Driverlicense:-20145656565656
+=> Customer National ID Scard:-20145656565656
 *****************************************************************************
 car Maker & model	 YEAR	 DialyCost	 Seats	 Color 
 Honda	  Civic	  2018	  1800		  5	Red	

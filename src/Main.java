@@ -3,13 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- 
+
 import java.util.Scanner;
 
-/**
- *
- * @author AhmedSherif
- */
+ 
 public class Main {
 
     public static void main(String[] args) {
@@ -38,12 +35,12 @@ public class Main {
                         break;
 
                     }
-                    /*
+
                 case 3:
 
                     rs.Serch();
                     break;
-*/
+
             }
         }
 
@@ -55,7 +52,8 @@ public class Main {
         System.out.println("|-----------------------------               |");
         System.out.println("|1: Add new Customer                         |");
         System.out.println("|2: New Request                              |");
-       // System.out.println("|3: Serch in contracts                       |");
+        System.out.println("|3: Serch in contracts                       |");
+      //System.out.println("|4: return car                               |");
         System.out.println("|0: Exit                                     |");
         System.out.println(" ____________________________________________ ");
         Scanner in = new Scanner(System.in);
@@ -65,21 +63,21 @@ public class Main {
                 System.out.print("=>Please enter your option ,Sir: ");
                 choice = in.nextInt();
                 in.nextLine();
-                if (choice < 0 || choice > 2) {
+                if (choice < 0 || choice > 3) {
 
                     System.out.println("Invalid  enter vaild Number");
                 }
- 
+
             } catch (Exception e) {
 
                 System.out.println("Invalid  input please input digits only");
 
                 break;
             }
-        } while (choice < 0 || choice > 2);
+        } while (choice < 0 || choice > 3);
 
         return choice;
-        
+
     }
 
 }

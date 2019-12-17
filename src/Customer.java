@@ -1,4 +1,4 @@
- 
+
 public class Customer {
 
     private String name;
@@ -25,7 +25,7 @@ public class Customer {
     }
 
     public void setNationalIDcard(String nationalIDcard) {
-        if ((nationalIDcard.charAt(0) == '2' ||  nationalIDcard.charAt(0) == '3')) { 
+        if ((nationalIDcard.charAt(0) == '2' || nationalIDcard.charAt(0) == '3')) {
             if (nationalIDcard.charAt(0) == '3') {
 
                 if ((nationalIDcard.charAt(1) == '0') && (nationalIDcard.charAt(2) == '0' || nationalIDcard.charAt(2) == '1')) {

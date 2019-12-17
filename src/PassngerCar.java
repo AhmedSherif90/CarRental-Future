@@ -1,4 +1,4 @@
- 
+
 public class PassngerCar extends Car {
 
     private String color;
@@ -28,7 +28,7 @@ public class PassngerCar extends Car {
 
     @Override
     public String toString() {
-        return getMaker() +"  "+ getModel() +"  "+ getYear() +"  "+ getDialycost()+"\t\t  "+ passseat +""+ color ; 
+        return getMaker() + "  " + getModel() + "  " + getYear() + "  " + getDialycost() + "\t\t  " + passseat + "" + color;
     }
 
 }

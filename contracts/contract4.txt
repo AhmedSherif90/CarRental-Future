@@ -1,8 +1,8 @@
 ________________________________________________________________
 		Contract
 
-*Customer Name:- a a
-*Customer ID:- 1000
+*Customer Name:- asdf a
+*Customer ID:- 1003
 *Customer National ID card:- 20145656565656 
 *Customer Driver license:- 20145656565656 
 *Customer PhoneNumber :- 01011920214 

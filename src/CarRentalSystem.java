@@ -1,4 +1,4 @@
- 
+
 import java.util.ArrayList;
 import java.util.*;
 import java.io.BufferedWriter;
@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+
 /**
  *
  * @author AhmedSherif
@@ -18,24 +19,28 @@ public class CarRentalSystem {
     private Customer newCustomer;
     private Contract newContract;
     private Request request;
-    private PassngerCar[] pCar;
-    private SportCars[] SCar;
-    private Scanner x;
+    ArrayList<Integer> arl;
+    private final PassngerCar[] pCar;
+    private final SportCars[] SCar;
+
+    private static Scanner x;
+    public static int position = 0;
     public static String counterasString = "";
     public static int counter = 0;
-    public static int ios = 10;
 
     public CarRentalSystem() {
 
         this.customerArray = new ArrayList();
 
+        LoadData();
         SCar = new SportCars[4];
+        pCar = new PassngerCar[10];
+
         SCar[0] = new SportCars("Chevrolet\t", "Corvett\t ", "2019\t", 6500, "\tRed\t", "15000");
         SCar[1] = new SportCars("Chevrolet\t", "Camaro\t", "2019\t", 2500, "\tYellow\t", "15000");
         SCar[2] = new SportCars("Ford     \t", "Mustang\t", "2019\t", 3000, "\tBlack\t", "15000");
         SCar[3] = new SportCars("Mini Cooper\t", "Countryman", "2019", 3500, "\tBlue", "15000");
 
-        pCar = new PassngerCar[10];
         pCar[0] = new PassngerCar("Honda\t", "Civic\t", "2018\t", "5\t", "Red\t", "1800");
         pCar[1] = new PassngerCar("BMW  \t", "3 Series\t", "2019\t", "5\t", "Black\t", "1800");
         pCar[2] = new PassngerCar("Ford \t", "Focus\t", "2018\t", "5\t", "Sliver\t", "1800");
@@ -46,25 +51,6 @@ public class CarRentalSystem {
         pCar[7] = new PassngerCar("Mercedes-Benz\t", "GLC\t", "2017\t", "7\t", "Sliver\t", "1800");
         pCar[8] = new PassngerCar("Audi  \t", "Q5\t", "2019\t", "7\t", "Black\t", "1800");
         pCar[9] = new PassngerCar("Jeep  \t", "Gladiator\t", "2020\t", "5\t", "Blue\t", "1800");
-
-    }
-
-    public int LoadData() {
-
-        try {
-            x = new Scanner(new File("Numofrequest.txt"));
-
-            while (x.hasNext()) {
-
-                counterasString = x.next();
-
-                counter = Integer.parseInt(counterasString);
-
-            }
-
-        } catch (FileNotFoundException e) {
-        }
-        return counter;
 
     }
 
@@ -124,6 +110,7 @@ public class CarRentalSystem {
 
         }
         customerArray.add(newCustomer);
+
         request.setConfirmed(true);
         System.out.println(newCustomer);
     }
@@ -169,10 +156,12 @@ public class CarRentalSystem {
                 System.out.println("1: Passnger car ");
                 System.out.println("2: Sports and super cars ");
                 System.out.print("Enter your option:  ");
+                Scanner sc = new Scanner(System.in);
+                String CarType = sc.nextLine().trim();
 
-                String CarType = in.nextLine().trim();
                 switch (CarType) {
                     case "1":
+
                         PassngerCar passcCar;
                         System.out.println("Chose one car from list:- ");
 
@@ -185,12 +174,13 @@ public class CarRentalSystem {
                         if (index > pCar.length) {
                             System.out.println("Error");
                         }
+
                         passcCar = (PassngerCar) pCar[index];
 
                         request.setCar(passcCar);
-
                         notVaildInput = false;
                         break;
+
                     case "2":
                         SportCars sportcar;
                         for (int i = 0; i < SCar.length; i++) {
@@ -202,13 +192,14 @@ public class CarRentalSystem {
                         if (indx > SCar.length) {
                             System.out.println("Error");
                         }
+
                         sportcar = (SportCars) SCar[indx];
 
                         request.setCar(sportcar);
 
                         notVaildInput = false;
                         break;
-                   
+
                     default:
                         System.out.println("Invalid input");
                         break;
@@ -239,48 +230,29 @@ public class CarRentalSystem {
                         throw new InputMismatchException("input digit only");
                     }
                 }
+                boolean notVaildInput1 = true;
+                while (notVaildInput1) {
 
-                System.out.println("Do you want confirm the request:-");
-                System.out.println("1: yes");
-                System.out.println("2: no");
+                    System.out.println("Do you want confirm the request:-");
+                    System.out.println("1: yes");
+                    System.out.println("2: no");
 
-                char choice2 = in.next().charAt(0);
+                    char choice2 = in.next().charAt(0);
 
-                switch (choice2) {
-                    case '2':
-                        return;
-                    case '1':
-                        System.out.println("Enter what is the payment method: ");
-                        System.out.println("1: Cash");
-                        System.out.println("2: Cradit Card");
-                        String payment = in.next();
-                        if (payment.charAt(0) == '1') {
-                            request.setConfirmed(true);
-                            newContract = new Contract(request);
-                            newContract.setPayment("Cash");
-                            //Load&&Save Data 
-                            //Ahmed Sherif
-                            LoadData();
-                            ++counter;
-                            request.setRequestid(counter);
-
-                            SaveData();
-                            System.out.println(request);
-
-                            System.out.println(newContract);
-                            newContract.save(counter);
-                            request.setDuration(0);
-                        } else if (payment.charAt(0) == '2') {
-                            System.out.print("Enter a credit card number:- ");
-                            long number = in.nextLong();
-                            CreaditCardChecker cr = new CreaditCardChecker(number);
-                            cr.print();
-                            if (cr.isIsValid()) {
+                    switch (choice2) {
+                        case '2':
+                            customerArray.clear();
+                            return;
+                        case '1':
+                            System.out.println("Enter what is the payment method: ");
+                            System.out.println("1: Cash");
+                            System.out.println("2: Cradit Card");
+                            String payment = in.next();
+                            if (payment.charAt(0) == '1') {
                                 request.setConfirmed(true);
                                 newContract = new Contract(request);
-                                newContract.setPayment("by Cradit Card");
-                                newContract.setCr(number);
-                                //Load&&Save Data
+                                newContract.setPayment("Cash");
+                                //Load&&Save Data 
                                 //Ahmed Sherif
                                 LoadData();
                                 ++counter;
@@ -288,21 +260,52 @@ public class CarRentalSystem {
 
                                 SaveData();
                                 System.out.println(request);
+
                                 System.out.println(newContract);
                                 newContract.save(counter);
                                 request.setDuration(0);
-                            } else {
-                                System.out.println("invalid creadit card");
-                                return;
+                                customerArray.clear();
+                                notVaildInput1 = false;
+                            } else if (payment.charAt(0) == '2') {
+                                System.out.print("Enter a credit card number:- ");
+                                long number = in.nextLong();
+                                CreaditCardChecker cr = new CreaditCardChecker(number);
+                                cr.print();
+                                if (cr.isIsValid()) {
+                                    request.setConfirmed(true);
+                                    newContract = new Contract(request);
+                                    newContract.setPayment("by Cradit Card");
+                                    newContract.setCr(number);
+                                    //Load&&Save Data
+                                    //Ahmed Sherif
+                                    LoadData();
+                                    ++counter;
+
+                                    request.setRequestid(counter);
+
+                                    SaveData();
+                                    System.out.println(request);
+                                    System.out.println(newContract);
+                                    newContract.save(counter);
+                                    request.setDuration(0);
+                                    customerArray.clear();
+                                    notVaildInput1 = false;
+                                } else {
+                                    System.out.println("invalid creadit card");
+                                    return;
+                                }
+                                break;
+
                             }
                             break;
-                        } 
-                         break;
-                    default:
-                        System.out.println("Invalid input");
-                        break;
+                        default:
+                            System.out.println("Invalid input");
+                            break;
+                    }
+
+                    notVaildInput = false;
                 }
-                notVaildInput = false;
+
             } catch (NumberFormatException e) {
 
                 System.out.println("Invalid input");
@@ -316,6 +319,26 @@ public class CarRentalSystem {
             }
 
         }
+
+    }
+
+    public int LoadData() {
+
+        try {
+            x = new Scanner(new File("Numofrequest.txt"));
+
+            while (x.hasNext()) {
+
+                counterasString = x.next();
+
+                counter = Integer.parseInt(counterasString);
+
+            }
+
+        } catch (FileNotFoundException e) {
+        }
+
+        return counter;
 
     }
 
@@ -357,26 +380,88 @@ public class CarRentalSystem {
     public void setCustomerArray(ArrayList<Customer> customerArray) {
         this.customerArray = customerArray;
     }
-    /* working in serch of contract
+
+    public String Show(String name, String cusID, String nationalIDcard, String driverlicense, String phonenumber, String totlaCost, String Payment, String Cr, String date, String returnTime) {
+        return "________________________________________________________________\n"
+                + "\t\tContract\n\n"
+                + name
+                + "\n" + cusID
+                + "\n" + nationalIDcard
+                + "\n" + driverlicense
+                + "\n" + phonenumber
+                + "\n" + totlaCost
+                + "\n" + Payment
+                + "\n" + Cr
+                + "\n" + (date)
+                + "\n" + (returnTime) + "\n\t\t\t\t(FutureAgance)\n\n"
+                + "_______________________________________________________________\n\n";
+
+    }
+
     public void Serch() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Input userName ");
-        String UserName = in.next();
-        if (UserName.equals("admin") || UserName.equals("ADMIN")) {
-            System.out.println("Input Password ");
-            int Password = in.nextInt();
-            if (Password == 123) {
+        boolean notVaildInput = true;
 
-                System.out.println("input customer id");
-                //1001 1000-1000 =0 +1 =1
+        while (notVaildInput) {
+            try {
+                System.out.println("Input userName ");
+                String UserName = in.next();
 
-            } else {
-                System.out.println("Password is invalid");
+                if (UserName.equals("admin") || UserName.equals("ADMIN")) {
+                    System.out.println("Input Password ");
+
+                    String Password = in.next();
+
+                    if (Password.equals("123")) {
+
+                        LoadData();
+
+                        System.out.println("input customer id");
+
+                        int index = in.nextInt();
+                        position = (index - 1000) + 1;
+
+                        if (counter >= position) {
+
+                            try {
+                                x = new Scanner(new File("contracts\\contract" + position + ".txt"));
+                                String data[] = new String[13];
+
+                                while (x.hasNext()) {
+                                    for (int i = 0; i < 13; i++) {
+                                        data[i] = x.nextLine();
+
+                                    }
+
+                                    String Show = Show(data[3], data[4], data[5], data[6], data[7], data[8], data[9], data[10], data[11], data[12]);
+
+                                    System.out.println(Show);
+
+                                    break;
+
+                                }
+                                x.close();
+                                notVaildInput = false;
+                            } catch (FileNotFoundException e) {
+                            }
+                        } else {
+
+                            System.out.println("no data for this id");
+
+                        }
+                    } else {
+                        System.out.println("Password is invalid");
+
+                    }
+
+                } else {
+                    System.out.println("UserName not found in our database");
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error check with valid input");
             }
-        } else {
-            System.out.println("UserName not found in our database");
         }
 
     }
-     */
 }

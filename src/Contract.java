@@ -1,4 +1,4 @@
- 
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
  *
  * @author AhmedSherif
  */
-public class Contract   {
+public class Contract {
 
     private String name;
     private String phonenumber;
@@ -28,7 +28,7 @@ public class Contract   {
 
     public Contract(Request re) {
 
-        this.driverlicense = this.name = re.getCustomer().getDriverlicense();
+        this.driverlicense = re.getCustomer().getDriverlicense();
         this.phonenumber = re.getCustomer().getPhonenumber();
         this.nationalIDcard = re.getCustomer().getNationalIDcard();
         this.cusID = re.getCustomer().getId();
@@ -43,8 +43,8 @@ public class Contract   {
             FileWriter fw = new FileWriter("contracts\\contract" + x + ".txt");
             BufferedWriter bufferedWriter = new BufferedWriter(fw);
             try ( PrintWriter pw = new PrintWriter(bufferedWriter)) {
+
                 pw.println(toString());
-                
 
             }
 
@@ -53,7 +53,6 @@ public class Contract   {
                     + "Data is unsaved");
         }
 
-        
     }
 
     @Override

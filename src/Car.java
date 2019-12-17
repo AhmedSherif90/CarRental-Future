@@ -1,21 +1,27 @@
- 
+
 public class Car {
 
     private String model;
     private String maker;
     private String year;
     private String dialycost;
-
-
-    public String getModel() {
-        return model;
-    }
+   
 
     public Car(String model, String maker, String year, String dialycost) {
         this.model = model;
-        this.year = year;
         this.maker = maker;
+        this.year = year;
         this.dialycost = dialycost;
+       
+    }
+
+    Car() {
+
+    }
+
+    
+    public String getModel() {
+        return model;
     }
 
     public void setModel(String model) {
@@ -45,5 +51,7 @@ public class Car {
     public void setDialycost(String dialycost) {
         this.dialycost = dialycost;
     }
+
+    
 
 }
