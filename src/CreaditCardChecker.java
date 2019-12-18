@@ -44,7 +44,7 @@ public class CreaditCardChecker {
 
     /* Return true if the card number is valid */
     public  boolean isValid(long number) {
-        boolean valid = ((getSize(number) >= 13 && getSize(number) <= 16)
+        boolean valid = ((getSize(number) >= 13 && getSize(number) <= 16) 
                 && (prefixMatched(number, 4) || prefixMatched(number, 5) || prefixMatched(number, 37)
                 || prefixMatched(number, 34) || prefixMatched(number, 6))
                 && (sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0);

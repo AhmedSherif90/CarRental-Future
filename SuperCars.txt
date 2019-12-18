@@ -1,0 +1,6 @@
+Maker: Chevrolet    Model: Corvett  Year: 2018  EngineSize: 6,500cc   Color: Red   DialyCost: 12000
+Maker: Ford         Model: Mustang  Year: 2019  EngineSize: 7,500cc   Color: Blue  DialyCost: 17000
+Maker: Porsche      Model: 911 GT2  Year: 1993  EngineSize: 5,500cc   Color: Blue  DialyCost: 13000
+Maker: Audi         Model: R8       Year: 2008  EngineSize: 6,500cc   Color: Red   DialyCost: 15000 V10
+Maker: Lamborghini  Model: Diablo   Year: 1990  EngineSize: 8,500cc   Color: Red   DialyCost: 18000 V12
+Maker: Aston Martin Model: Vanquish Year: 2010  EngineSize: 4,500cc   Color: Red   DialyCost: 20000 565Hp

@@ -1,4 +1,4 @@
- 
+
 public class Request {
 
     private Car car;
@@ -14,6 +14,7 @@ public class Request {
     public Request() {
 
     }
+
     public boolean isConfirmed() {
         return confirmed;
     }
@@ -22,7 +23,6 @@ public class Request {
         this.confirmed = confirmed;
     }
 
-    
     public void setCar(Car car) {
         this.car = car;
     }
@@ -40,12 +40,10 @@ public class Request {
     }
 
     public void setDuration(int duration) {
-   
+
         this.duration = duration;
-      
-            }
-         
-   
+
+    }
 
     public int getRequestid() {
         return requestid;
@@ -71,15 +69,15 @@ public class Request {
         result += customer;
 
         if (car instanceof PassngerCar) {
-            result += "\ncar Maker & model\t YEAR\t DialyCost\t Seats\t Color \n";
+            result += "\n\t\tPassngerCar\n";
 
         } else {
-            result += "\ncar Maker & model\t YEAR\t DialyCost\t EngineSize\t Color \n";
+            result += "\n\t\tSport&SuperCar\n";
 
         }
 
-        result += car;
-        result += "\nduration:- " + duration;
+        result += "" + car;
+        result += "\n duration:- " + duration;
         result += duration > 1 ? " days\n " : " day\n";
         result += "Status:- ";
         result += confirmed ? "confirmed\n " : "Not confirmed\n";

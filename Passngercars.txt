@@ -1,0 +1,14 @@
+Maker: Honda         Model: Civic     Year: 2018   Seats: 5   Color: Red    DialyCost: 1800  Cope
+Maker: BMW           Model: 3 Series  Year: 2019   Seats: 2   Color: White  DialyCost: 1800  Compact
+Maker: Ford          Model: Focus     Year: 2019   Seats: 5   Color: Red    DialyCost: 1890  Hatchback
+Maker: Honda         Model: Accord    Year: 2017   Seats: 5   Color: Black  DialyCost: 4200  Cope
+Maker: Mercedes-Benz Model: GLC       Year: 2018   Seats: 5   Color: Red    DialyCost: 3000  Compact
+Maker: Jeep          Model: Gladiator Year: 2018   Seats: 5   Color: White  DialyCost: 3000  4x4
+Maker: Hyundai       Model: Tucson    Year: 2017   Seats: 5   Color: Selvar DialyCost: 2900  SUV
+Maker: Audi          Model: Q5        Year: 2020   Seats: 5   Color: White  DialyCost: 4200  Compact
+Maker: Mitsubishi    Model: lancer    Year: 2017   Seats: 5   Color: White  DialyCost: 900   Sedan
+Maker: Hyundai       Model: Verna     Year: 2014   Seats: 5   Color: Green  DialyCost: 1900   
+Maker: bmw           Model: M3        Year: 2020   Seats: 5   Color: Selvar DialyCost: 10000 Compact
+Maker: kia           Model: cerato    Year: 2020   Seats: 5   Color: White  DialyCost: 4900  Compact
+Maker: MG            Model: 5         Year: 2020   Seats: 5   Color: Black  DialyCost: 2900  Compact
+Maker: Geely         Model: Emgrand   Year: 2020   Seats: 5   Color: Selvar DialyCost: 2900  Compact

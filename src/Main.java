@@ -6,7 +6,6 @@
 
 import java.util.Scanner;
 
- 
 public class Main {
 
     public static void main(String[] args) {
@@ -53,7 +52,6 @@ public class Main {
         System.out.println("|1: Add new Customer                         |");
         System.out.println("|2: New Request                              |");
         System.out.println("|3: Serch in contracts                       |");
-      //System.out.println("|4: return car                               |");
         System.out.println("|0: Exit                                     |");
         System.out.println(" ____________________________________________ ");
         Scanner in = new Scanner(System.in);
